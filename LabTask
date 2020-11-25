@@ -1,0 +1,38 @@
+package labtask;
+
+import java.util.Scanner;
+
+public class LabTask {
+
+    public static int findBinary(int d_Number) {
+
+        if (d_Number == 0) {
+            return 0;
+        } else {
+            
+            int a;
+            a=d_Number % 2 + 10*findBinary(d_Number / 2);
+                        
+            
+            return a;
+            
+           
+        }
+    }
+
+    ;
+    
+
+    public static void main(String[] args) {
+
+        Scanner s = new Scanner(System.in);
+
+        int d_Number;
+        System.out.println("Please Enter Number Of Which You Want Binary =");
+
+        d_Number = s.nextInt();
+        System.out.println(findBinary(d_Number));
+
+    }
+
+}
